@@ -5,7 +5,7 @@
 <ul class="list-group" *ngIf="events">
     <li class="list-group-item" *ngFor="let meetup of events">
         <div class="h3">{{meetup.group.name}}</div>
-        <div class="h4"><a href="{{meetup.link}}">{{meetup.name}}</a> <span class="small">({{meetup.yes_rsvp_count}} going)</span></div>
+        <div class="h4"><a href="{{meetup.link}}" target="_blank">{{meetup.name}}</a> <span class="small">({{meetup.yes_rsvp_count}} going)</span></div>
         <div>{{meetup.time | date:'EEEE, dd MMM h:mm a'}}
         <span *ngIf="meetup.venue"> @ {{meetup.venue.name}} - {{meetup.venue.city}}</span>
         <span *ngIf="!meetup.venue"> | Location not specified.</span>
